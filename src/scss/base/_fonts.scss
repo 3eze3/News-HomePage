@@ -1,0 +1,36 @@
+@use "../abstract/variables" as cl-ft;
+@font-face {
+  font-family: "Inter-Bd";
+  src: url("../../../dist/assets/fonts/static/Inter-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter-ExBd";
+  src: url("../../../dist/assets/fonts/static/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Rg";
+  src: url("../../../dist/assets/fonts/static/Inter-Regular.ttf");
+}
+
+body {
+  min-height: 100dvh;
+  hyphens: manual;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+p,
+span {
+  text-decoration: none;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
