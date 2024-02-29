@@ -8,43 +8,43 @@
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
     <script src="js/main.js" defer></script>
     <title>News homepage</title>
   </head>
   <body>
     <!-- Al momento de hace click en los links , que se remarque las secciones a las que pertenece con ts, solo en desktop -->
     <header class="head">
-      <img src="head__logo" alt="Logo" />
+      <img class="head__logo" src="assets/images/logo.svg" alt="Logo" />
       <!-- Usar display none , ahora podemos transisionarlo, Cuando se cambie a desktop display none button-->
-        <button class="head__btn">
-          <img
-            class="head__icon head__icon--open"
-            src="assets/images/icon-menu.svg"
-            alt="Open Menu" />
-          <img
-            class="head__logo head__icon--close"
-            src="assets/images/icon-menu-close.svg"
-            alt="Open Menu" />
-        </button>
-      </div>
+      <button class="head__btn">
+        <img
+          class="head__icon head__icon--open"
+          src="assets/images/icon-menu.svg"
+          alt="Open Menu" />
+        <img
+          class="head__logo head__icon--close"
+          src="assets/images/icon-menu-close.svg"
+          alt="Open Menu" />
+      </button>
       <!-- Poner un link activo -->
-      <nav class="head__nav">
-        <ul class="head__list">
-          <li class="head__item">
-            <a class="head__link" href="#">Home</a>
+      <nav class="head__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#">Home</a>
           </li>
-          <li class="head__item">
-            <a class="head__link" href="#New">New</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#New">New</a>
           </li>
-          <li class="head__item">
-            <a class="head__link" href="#Popular">Popular</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#Popular">Popular</a>
           </li>
-          <li class="head__item">
-            <a class="head__link" href="#Trending">Trending</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#Trending">Trending</a>
           </li>
-          <li class="head__item">
-            <a class="head__link" href="#Categories">Categories</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#Categories">Categories</a>
           </li>
         </ul>
       </nav>
@@ -59,7 +59,7 @@
         of the platforms back into the hands of the people. But is it really
         fulfilling its promise?
       </p>
-      <button class="introduction__btn">Read more</button>
+      <button class="introduction__btn">READ MORE</button>
     </main>
     <!--  -->
     <aside class="new" id="New">
@@ -67,7 +67,9 @@
       <!--  -->
       <section class="new__group">
         <h3 class="new__name">Hydrogen VS Electric Cars</h3>
-        <p class="new__description">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <p class="new__description">
+          Will hydrogen-fueled cars ever catch up to EVs?
+        </p>
       </section>
       <!--  -->
 
@@ -90,28 +92,31 @@
     </aside>
 
     <!--  -->
-    <section class="categories">
+    <section class="categories" id="Categories">
       <!-- hidden -->
       <h3 class="contegories__title">Modern Laptops</h3>
       <article class="categories__new">
         <span class="categories__number">01</span>
-        <h3 class="categories__name">
-          Reviving Retro PCs What happens when old PCs are given modern
-          upgrades?
-        </h3>
-        <p class="categories__description"></p>
+        <h3 class="categories__name">Reviving Retro PCs</h3>
+        <p class="categories__description">
+          What happens when old PCs are given modern upgrades?
+        </p>
       </article>
       <!--  -->
       <article class="categories__new">
         <span class="categories__number">02</span>
         <h3 class="categories__name">Top 10 Laptops of 2022</h3>
-        <p class="categories__description">Our best picks for various needs and budgets.</p>
+        <p class="categories__description">
+          Our best picks for various needs and budgets.
+        </p>
       </article>
       <!--  -->
       <article class="categories__new">
         <span class="categories__number">03</span>
         <h3 class="categories__name">The Growth of Gaming</h3>
-        <p class="categories__description">How the pandemic has sparked fresh opportunities.</p>
+        <p class="categories__description">
+          How the pandemic has sparked fresh opportunities.
+        </p>
       </article>
       <!--  -->
     </section>
