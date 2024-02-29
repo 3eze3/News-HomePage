@@ -1,0 +1,10 @@
+@use "../abstract/mixins" as layout;
+@use "../abstract/variables" as clr_ft;
+body {
+  background-color: clr_ft.$off-white;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 4);
+  gap: 2.15rem;
+}
