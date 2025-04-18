@@ -1,0 +1,41 @@
+@use '../abstract/mixins' as layout;
+.introduction {
+	grid-column: span 2;
+	grid-row: span 5;
+	@include layout.flex($align: flex-start);
+	@include layout.mobile(550px) {
+		grid-column: span 1;
+	}
+	&__wrapper {
+		@include layout.flex($direction: row, $justify: space-between);
+		@include layout.mobile(550px) {
+			@include layout.flex($align: flex-start, $gap: 1rem);
+		}
+	}
+
+	&__title {
+		flex-basis: 50%;
+		padding-right: 0.5rem;
+		@include layout.mobile(550px) {
+			grid-column: span 1;
+		}
+		@include layout.mobile(550px) {
+			padding-right: 0;
+		}
+	}
+
+	&__information {
+		@include layout.mobile(550px) {
+			grid-column: span 1;
+		}
+		flex-basis: 50%;
+		@include layout.flex($align: flex-start, $justify: space-between);
+		@include layout.mobile(550px) {
+			@include layout.flex($align: flex-start);
+		}
+	}
+
+	&__btn {
+		padding: 1rem 2rem;
+	}
+}
