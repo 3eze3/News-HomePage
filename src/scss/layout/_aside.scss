@@ -1,0 +1,20 @@
+@use '../abstract/variables' as v;
+@use '../abstract/mixins' as layout;
+.new {
+	background-color: v.$very-dark-blue;
+	grid-row: span 5;
+	padding: 1.55rem 1.35rem;
+	@include layout.flex($align: flex-start, $justify: space-between, $gap: 0rem);
+	@include layout.mobile(550px) {
+		grid-row: span 10;
+	}
+	&__group {
+		border-bottom: solid v.$grayish-blue 0.1px;
+		height: 100%;
+		padding-top: 0.65rem;
+		@include layout.flex($align: flex-start, $gap: 0.67rem);
+		&:nth-child(4) {
+			border-bottom: none;
+		}
+	}
+}
