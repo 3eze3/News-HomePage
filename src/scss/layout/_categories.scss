@@ -1,0 +1,18 @@
+@use '../abstract/mixins' as layout;
+.categories {
+	grid-column: span 4;
+	@include layout.flex($direction: row, $justify: space-between, $gap: 0rem);
+	&__new {
+		display: flex;
+		gap: 1rem;
+	}
+
+	&__img {
+		width: 6.25rem;
+	}
+
+	&__wrapper {
+		padding-inline: 0.2rem;
+		@include layout.flex($align: flex-start, $gap: 0.5rem);
+	}
+}
