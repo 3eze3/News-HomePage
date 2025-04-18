@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Inter-Bd";
+  src: url("../../../dist/assets/fonts/static/Inter-Bold.ttf");
+}
+@font-face {
+  font-family: "Inter-ExBd";
+  src: url("../../../dist/assets/fonts/static/Inter-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Inter-Rg";
+  src: url("../../../dist/assets/fonts/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter-Wht";
+  src: url("../../../dist/assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+body {
+  min-height: 100dvh;
+  hyphens: manual;
+  background-color: hsl(40deg, 23%, 95%);
+  font-family: "Inter-Rg";
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 2.8em;
+  line-height: 1;
+}
+
+h2 {
+  color: hsl(35deg, 77%, 62%);
+  font-size: 2.15em;
+}
+
+p {
+  font-family: "Inter-Wht";
+  font-size: 1em;
+  line-height: 1.6;
+  color: hsl(236deg, 13%, 42%);
+}
+
+span {
+  font-size: 2em;
+  color: hsl(233deg, 8%, 79%);
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+button {
+  background-color: transparent;
+}
+
+a {
+  color: hsl(240deg, 100%, 5%);
+  font-size: 1.2em;
+  font-family: "Inter-Rg";
+  line-height: 2.6;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+a:hover {
+  color: hsl(35deg, 77%, 62%);
+  transition: color 0.2s ease;
+}
+
+.introduction__btn {
+  background-color: hsl(5deg, 85%, 63%);
+  letter-spacing: 0.4em;
+}
+
+.new__name {
+  color: hsl(40deg, 23%, 95%);
+  font-size: 1.25em;
+}
+
+h2,
+h3 {
+  font-family: "Inter-Bd";
+}
+
+h1,
+span {
+  font-family: "Inter-ExBd";
+}
+
+.categories__title,
+h1 {
+  color: hsl(240deg, 100%, 5%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+img,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(40deg, 23%, 95%);
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 4);
+  gap: 2.15rem;
+}
+
+.head {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0rem;
+}
+.head__logo {
+  width: 3.65rem;
+}
+.head__btn {
+  width: 3rem;
+  width: 2.5rem;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  perspective: 100em;
+  transform-origin: center right;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+}
+.head__btn--active {
+  transform: translateX(-100%) rotateY(-180deg);
+  transition: transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.head__icon {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+}
+.head__icon--open {
+  transform: rotate(0deg);
+}
+.head__icon--close {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  transform: rotate(180deg);
+}
+.head__icon--close--active {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.nav {
+  background-color: color-mix(in srgb, #ffffff 70%, rgb(248, 254, 253) 100%);
+  box-shadow: 0rem -7rem 3.5rem 0.1rem rgba(194, 237, 237, 0.391) inset, 0.1rem -0.1rem 0.5rem 0.1rem hsl(40deg, 23%, 95%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100rem);
+  transition: transform 1s ease-in-out;
+  height: 100%;
+  width: 67%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0rem;
+}
+.nav--active {
+  transform: translateX(0rem);
+  transition: transform 1s ease-in-out;
+}
+.nav__list {
+  padding: 2rem 3rem 13rem;
+}
+
+/*# sourceMappingURL=style.css.map */

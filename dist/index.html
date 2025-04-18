@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="js/main.js" defer></script>
+    <title>News homepage</title>
+  </head>
+  <body>
+    <!-- Al momento de hace click en los links , que se remarque las secciones a las que pertenece con ts, solo en desktop -->
+    <header class="head">
+      <img class="head__logo" src="assets/images/logo.svg" alt="Logo" />
+      <!-- Usar display none , ahora podemos transisionarlo, Cuando se cambie a desktop display none button-->
+      <button class="head__btn">
+        <img
+          class="head__icon head__icon--open"
+          src="assets/images/icon-menu.svg"
+          alt="Open Menu" />
+        <img
+          class="head__logo head__icon--close"
+          src="assets/images/icon-menu-close.svg"
+          alt="Open Menu" />
+      </button>
+      <!-- Poner un link activo -->
+      <nav class="head__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="#">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#New">New</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#Popular">Popular</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#Trending">Trending</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#Categories">Categories</a>
+          </li>
+        </ul>
+      </nav>
+      <!--  -->
+    </header>
+    <!--  -->
+    <main class="introduction" id="#Popular">
+      <img class="introduction__image src=" alt="Future of Web 3.0?" />
+      <h1 class="introduction__title">The Bright Future of Web 3.0?</h1>
+      <p class="introduction__description">
+        We dive into the next evolution of the web that claims to put the power
+        of the platforms back into the hands of the people. But is it really
+        fulfilling its promise?
+      </p>
+      <button class="introduction__btn">READ MORE</button>
+    </main>
+    <!--  -->
+    <aside class="new" id="New">
+      <h2 class="new__title">New</h2>
+      <!--  -->
+      <section class="new__group">
+        <h3 class="new__name">Hydrogen VS Electric Cars</h3>
+        <p class="new__description">
+          Will hydrogen-fueled cars ever catch up to EVs?
+        </p>
+      </section>
+      <!--  -->
+
+      <section class="new__group">
+        <h3 class="new__name">The Downsides of AI Artistry</h3>
+        <p class="new__description">
+          What are the possible adverse effects of on-demand AI image
+          generation?
+        </p>
+      </section>
+      <!--  -->
+      <section class="new__group">
+        <h3 class="new__name">Is VC Funding Drying Up?</h3>
+        <p class="new__description">
+          Private funding by VC firms is down 50% YOY. We take a look at what
+          that means.
+        </p>
+      </section>
+      <!--  -->
+    </aside>
+
+    <!--  -->
+    <section class="categories" id="Categories">
+      <!-- hidden -->
+      <h3 class="contegories__title">Modern Laptops</h3>
+      <article class="categories__new">
+        <span class="categories__number">01</span>
+        <h3 class="categories__name">Reviving Retro PCs</h3>
+        <p class="categories__description">
+          What happens when old PCs are given modern upgrades?
+        </p>
+      </article>
+      <!--  -->
+      <article class="categories__new">
+        <span class="categories__number">02</span>
+        <h3 class="categories__name">Top 10 Laptops of 2022</h3>
+        <p class="categories__description">
+          Our best picks for various needs and budgets.
+        </p>
+      </article>
+      <!--  -->
+      <article class="categories__new">
+        <span class="categories__number">03</span>
+        <h3 class="categories__name">The Growth of Gaming</h3>
+        <p class="categories__description">
+          How the pandemic has sparked fresh opportunities.
+        </p>
+      </article>
+      <!--  -->
+    </section>
+    <footer></footer>
+  </body>
+</html>

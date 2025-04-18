@@ -1,0 +1,22 @@
+@use "../abstract/variables" as clr_ft;
+@use "../abstract/mixins" as layout;
+.nav {
+  background-color: color-mix(in srgb, #ffffff 70%, rgb(248, 254, 253) 100%);
+  box-shadow: 0rem -7rem 3.5rem 0.1rem rgba(194, 237, 237, 0.391) inset,
+    0.1rem -0.1rem 0.5rem 0.1rem clr_ft.$off-white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100rem);
+  transition: transform 1s ease-in-out;
+  height: 100%;
+  width: 67%;
+  @include layout.flex($justify: flex-start, $gap: 0rem, $direction: row);
+  &--active {
+    transform: translateX(0rem);
+    transition: transform 1s ease-in-out;
+  }
+  &__list {
+    padding: 2rem 3rem 13rem;
+  }
+}
