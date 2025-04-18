@@ -94,6 +94,7 @@ a:hover {
 .introduction__btn:hover {
   background-color: hsl(240, 100%, 5%);
   color: hsl(40, 23%, 95%);
+  cursor: pointer;
 }
 
 .new__name {
