@@ -1,10 +1,15 @@
-@use "../abstract/mixins" as layout;
-@use "../abstract/variables" as clr_ft;
-body {
-  background-color: clr_ft.$off-white;
-  padding: 2rem 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto, 4);
-  gap: 2.15rem;
+@use '../abstract/mixins' as layout;
+@use '../abstract/variables' as clr_ft;
+.main {
+	background-color: clr_ft.$off-white;
+	padding-top: 3.5rem;
+
+	@include layout.grid();
+
+	@include layout.mobile(550px) {
+		padding-top: 2rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4.25rem 2rem;
+	}
 }
