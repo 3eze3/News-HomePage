@@ -1,5 +1,10 @@
-@use "./base/fonts";
-@use "./base/reset_tags";
-@use "./layout/main";
-@use "./layout/header";
-@use "./components/menu";
+@use './base/fonts';
+@use './base/reset_tags';
+//
+@use './layout/main';
+@use './layout/header';
+@use './layout/introduction';
+@use './layout/aside';
+@use './layout/categories';
+//
+@use './components/menu';
