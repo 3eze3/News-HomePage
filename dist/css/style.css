@@ -17,7 +17,7 @@
 body {
   min-height: 100dvh;
   hyphens: manual;
-  background-color: hsl(40, 23%, 95%);
+  background-color: hsl(48, 20%, 95%);
   font-family: "Inter-Rg";
   max-width: 1113px;
   padding-top: 5.6rem;
@@ -187,7 +187,6 @@ html {
 }
 
 .main {
-  background-color: hsl(40, 23%, 95%);
   padding-top: 3.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

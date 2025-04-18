@@ -1,7 +1,7 @@
 @use '../abstract/mixins' as layout;
 @use '../abstract/variables' as clr_ft;
 .main {
-	background-color: clr_ft.$off-white;
+	// background-color: clr_ft.$off-white;
 	padding-top: 3.5rem;
 
 	@include layout.grid();
