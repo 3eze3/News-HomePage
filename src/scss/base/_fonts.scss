@@ -1,100 +1,150 @@
-@use "../abstract/variables" as clr_ft;
+@use '../abstract/variables' as clr_ft;
+@use '../abstract/mixins' as layout;
 @font-face {
-  font-family: "Inter-Bd";
-  src: url("../../../dist/assets/fonts/static/Inter-Bold.ttf");
+	font-family: 'Inter-Bd';
+	src: url('../assets/fonts/static/Inter-Bold.ttf');
 }
 
 @font-face {
-  font-family: "Inter-ExBd";
-  src: url("../../../dist/assets/fonts/static/Inter-ExtraBold.ttf");
+	font-family: 'Inter-ExBd';
+	src: url('../assets/fonts/static/Inter-ExtraBold.ttf');
 }
 
 @font-face {
-  font-family: "Inter-Rg";
-  src: url("../../../dist/assets/fonts/static/Inter-Regular.ttf");
+	font-family: 'Inter-Rg';
+	src: url('../assets/fonts/static/Inter-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Inter-Wht";
-  src: url("../../../dist/assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+	font-family: 'Inter-Wht';
+	src: url('../assets/fonts/Inter-VariableWght.ttf');
 }
 
 body {
-  min-height: 100dvh;
-  hyphens: manual;
-  background-color: clr_ft.$off-white;
-  font-family: "Inter-Rg";
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	min-height: 100dvh;
+	hyphens: manual;
+	background-color: clr_ft.$off-white;
+	font-family: 'Inter-Rg';
+	max-width: 1113px;
+	padding-top: 5.6rem;
+	padding-bottom: 8.5rem;
+	@include layout.mobile(550px) {
+		padding-top: 1.6rem;
+		padding-bottom: 4.5rem;
+		padding-inline: 1rem;
+	}
+	margin: auto;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-  font-size: clr_ft.$hd1-4em;
-  line-height: clr_ft.$line-1-1;
+	// font-size: clr_ft.$hd3-5em;
+	line-height: clr_ft.$line-1-1;
+	//
+	font-size: 2.5em;
 }
 
 h2 {
-  color: clr_ft.$soft-orange;
-  font-size: clr_ft.$hd2-2-15em;
+	font-size: clr_ft.$hd2-5em;
+	color: clr_ft.$soft-orange;
 }
 
 p {
-  font-family: "Inter-Wht";
-  font-size: clr_ft.$pg-1em;
-  line-height: clr_ft.$line-1-6;
-  color: clr_ft.$dark-grayish-blue;
+	font-family: 'Inter-Wht';
+	font-size: clr_ft.$pg-095em;
+	line-height: clr_ft.$line-1-6;
+	color: clr_ft.$dark-grayish-blue;
 }
 
 span {
-  font-size: 2em;
-  color: clr_ft.$grayish-blue;
+	font-size: 2em;
+	color: clr_ft.$grayish-blue;
 }
 
 svg {
-  width: 100%;
-  display: block;
-  fill: currentColor;
+	width: 100%;
+	display: block;
+	fill: currentColor;
 }
 
 button {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 a {
-  color: clr_ft.$very-dark-blue;
-  font-size: 1.2em;
-  font-family: "Inter-Rg";
-  line-height: 2.6;
-  transition: color 0.2s ease;
-  cursor: pointer;
-  &:hover {
-    color: clr_ft.$soft-orange;
-    transition: color 0.2s ease;
-  }
+	color: clr_ft.$dark-grayish-blue;
+	font-size: 0.95em;
+	font-family: 'Inter-Rg';
+	line-height: 2.6;
+	transition: color 0.2s ease;
+	cursor: pointer;
+	&:hover {
+		color: clr_ft.$soft-orange;
+		transition: color 0.2s ease;
+	}
 }
 
 .introduction__btn {
-  background-color: clr_ft.$soft-red;
-  letter-spacing: 0.4em;
+	font-weight: 800;
+	background-color: clr_ft.$soft-red;
+	letter-spacing: 0.3em;
+	transition: color 0.15s ease, background-color 0.15s ease;
+	&:hover {
+		background-color: clr_ft.$very-dark-blue;
+		color: clr_ft.$off-white;
+	}
 }
 
 .new__name {
-  color: clr_ft.$off-white;
-  font-size: clr_ft.$hd3-1-25em;
+	color: clr_ft.$off-white;
+	font-size: clr_ft.$hd3-1-25em;
+	transition: color 0.15s ease;
+	&:hover {
+		color: clr_ft.$soft-orange;
+		cursor: pointer;
+	}
 }
 
 h2,
 h3 {
-  font-family: "Inter-Bd";
+	font-family: 'Inter-Bd';
 }
 
 h1,
 span {
-  font-family: "Inter-ExBd";
+	font-family: 'Inter-ExBd';
 }
 
 .categories__title,
 h1 {
-  color: clr_ft.$very-dark-blue;
+	color: clr_ft.$very-dark-blue;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.new__description {
+	color: clr_ft.$grayish-blue;
+}
+
+.categories__number {
+	color: clr_ft.$soft-red;
+}
+.categories__name {
+	transition: color 0.15s ease;
+	&:hover {
+		color: clr_ft.$soft-red;
+		cursor: pointer;
+	}
 }
