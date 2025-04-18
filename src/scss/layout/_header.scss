@@ -1,45 +1,49 @@
-@use "../abstract/mixins" as layout;
+@use '../abstract/mixins' as layout;
 .head {
-  width: 100%;
-  height: fit-content;
-  @include layout.flex($direction: row, $justify: space-between, $gap: 0rem);
+	width: 100%;
+	@include layout.flex($direction: row, $justify: space-between, $gap: 0rem);
+	&__logo {
+		width: 4.15rem;
+		@include layout.mobile(550px) {
+			width: 3rem;
+		}
+	}
 
-  &__logo {
-    width: 3.65rem;
-  }
+	&__btn {
+		width: 3rem;
+		width: 2.5rem;
+		position: relative;
+		z-index: 2;
+		cursor: pointer;
+		perspective: 100em;
+		transform-origin: center right;
+		transform-style: preserve-3d;
+		transition: transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		display: none;
+		@include layout.mobile(550px) {
+			@include layout.flex($direction: row, $gap: 0rem);
+			&--active {
+				transform: translateX(-100%) rotateY(-180deg);
+				transition: transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+			}
+		}
+	}
 
-  &__btn {
-    width: 3rem;
-    width: 2.5rem;
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-    perspective: 100em;
-    transform-origin: center right;
-    transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    @include layout.flex($direction: row, $gap: 0rem);
-    &--active {
-      transform: translateX(-100%) rotateY(-180deg);
-      transition: transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    }
-  }
-
-  &__icon {
-    backface-visibility: hidden;
-    position: absolute;
-    width: 100%;
-    &--open {
-      transform: rotate(0deg);
-    }
-    &--close {
-      opacity: 0;
-      transition: opacity 0.7s ease;
-      transform: rotate(180deg);
-      &--active {
-        opacity: 1;
-        transition: opacity 2s ease-in-out;
-      }
-    }
-  }
+	&__icon {
+		backface-visibility: hidden;
+		position: absolute;
+		width: 100%;
+		&--open {
+			transform: rotate(0deg);
+		}
+		&--close {
+			opacity: 0;
+			transition: opacity 0.7s ease;
+			transform: rotate(180deg);
+			&--active {
+				opacity: 1;
+				transition: opacity 2s ease-in-out;
+			}
+		}
+	}
 }
