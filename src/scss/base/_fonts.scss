@@ -40,10 +40,11 @@ body {
 }
 
 h1 {
-	// font-size: clr_ft.$hd3-5em;
+	font-size: clr_ft.$hd3-5em;
 	line-height: clr_ft.$line-1-1;
-	//
-	font-size: 2.5em;
+	@include layout.mobile(550px) {
+		font-size: 2.5em;
+	}
 }
 
 h2 {
